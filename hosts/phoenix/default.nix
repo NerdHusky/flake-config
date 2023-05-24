@@ -60,7 +60,7 @@ in
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-  programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+  programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.lxqt.lxqt-openssh-askpass.out}/bin/lxqt-openssh-askpass";
   
 
   # Enable CUPS to print documents.
