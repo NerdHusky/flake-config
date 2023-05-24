@@ -128,7 +128,13 @@ in
       home-manager
     ];
   };
-  home-manager.users.carlo = import ../../home/carlo/phoenix.nix;
+  # home-manager.users.carlo = import ../../home/carlo/phoenix.nix;
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      carlo.imports = import ../../home/carlo/phoenix.nix;
+    };
+  };
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-12.2.3"
