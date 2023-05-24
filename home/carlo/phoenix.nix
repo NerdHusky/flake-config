@@ -1,7 +1,7 @@
 { inputs, lib, pkgs, config, outputs, ... }:
 let
   inherit (inputs.nix-colors) colorSchemes;
-  inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) colorschemeFromPicture nixWallpaperFromScheme;
+  # inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) colorschemeFromPicture nixWallpaperFromScheme;
 in
 {
   imports = [
@@ -9,9 +9,13 @@ in
     inputs.nix-colors.homeManagerModule
     # ../features/cli
     # ../features/nvim
-    ../features/helix
+    (./features/helix)
   ];
   # ] ++ (builtins.attrValues outputs.homeManagerModules);
+
+  # home-manager = {
+  #   extraSpecialArgs = { inherit inputs outputs; };
+  # };
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
