@@ -1,0 +1,6 @@
+creation_rules:
+  - path_regex: secrets/.*
+    pgp: >-
+      7576FC9B3E485B9A424D3994A06836E85F0D9042     
+    age: >-
+      age1xm6xsg7pv004e08emwl9vzpsegu6tlr2ljypsu8qatc2ks6tn4tqddhyck
