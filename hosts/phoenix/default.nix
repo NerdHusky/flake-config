@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, inputs, outputs, ... }:
 
 let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
@@ -130,9 +130,9 @@ in
   };
   # home-manager.users.carlo = import ../../home/carlo/phoenix.nix;
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      carlo.imports = import ../../home/carlo/phoenix.nix;
+      carlo = import ../../home/carlo/phoenix.nix;
     };
   };
 
@@ -144,7 +144,7 @@ in
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     neovim
-    helix
+    # helix
     neofetch
     pipes
     matrixcli
