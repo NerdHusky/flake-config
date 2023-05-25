@@ -49,90 +49,91 @@
               <string>Noto Serif</string>
               <string>Twemoji</string>
             </edit>
-          </match>
+        </match>
 
-          <!-- Default monospace fonts-->
-          <match target="pattern">
-            <test name="family">
-              <string>monospace</string>
-            </test>
-            <edit name="family" mode="prepend" binding="strong">
-              <string>Noto Sans Mono CJK SC</string>
-              <string>Symbols Nerd Font</string>
-              <string>Twemoji</string>
-            </edit>
-          </match>
+        <!-- Default monospace fonts-->
+        <match target="pattern">
+          <test name="family">
+            <string>monospace</string>
+          </test>
+          <edit name="family" mode="prepend" binding="strong">
+            # <string>Noto Sans Mono CJK SC</string>
+            <string>Roboto Mono Nerd Font</string>
+            <string>Symbols Nerd Font</string>
+            <string>Twemoji</string>
+          </edit>
+        </match>
 
-          <match target="pattern">
-            <test name="lang">
-              <string>zh-HK</string>
-            </test>
-            <test name="family">
-              <string>Noto Sans CJK SC</string>
-            </test>
-            <edit name="family" binding="strong">
-              <string>Noto Sans CJK HK</string>
-            </edit>
-          </match>
+        <match target="pattern">
+          <test name="lang">
+            <string>zh-HK</string>
+          </test>
+          <test name="family">
+            <string>Noto Sans CJK SC</string>
+          </test>
+          <edit name="family" binding="strong">
+            <string>Noto Sans CJK HK</string>
+          </edit>
+        </match>
 
-          <match target="pattern">
-            <test name="lang">
-              <string>zh-HK</string>
-            </test>
-            <test name="family">
-              <string>Noto Serif CJK SC</string>
-            </test>
-            <edit name="family" binding="strong">
-              <!-- not have HK -->
-              <string>Noto Serif CJK TC</string>
-            </edit>
-          </match>
+        <match target="pattern">
+          <test name="lang">
+            <string>zh-HK</string>
+          </test>
+          <test name="family">
+            <string>Noto Serif CJK SC</string>
+          </test>
+          <edit name="family" binding="strong">
+            <!-- not have HK -->
+            <string>Noto Serif CJK TC</string>
+          </edit>
+        </match>
 
-          <match target="pattern">
-            <test name="lang">
-              <string>zh-HK</string>
-            </test>
-            <test name="family">
-              <string>Noto Sans Mono CJK SC</string>
-            </test>
-            <edit name="family" binding="strong">
-              <string>Noto Sans Mono CJK HK</string>
-            </edit>
-          </match>
+        <match target="pattern">
+          <test name="lang">
+            <string>zh-HK</string>
+          </test>
+          <test name="family">
+            <string>Noto Sans Mono CJK SC</string>
+          </test>
+          <edit name="family" binding="strong">
+            <string>Noto Sans Mono CJK HK</string>
+          </edit>
+        </match>
 
-          <match target="pattern">
-            <test name="lang">
-              <string>zh-TW</string>
-            </test>
-            <test name="family">
-              <string>Noto Sans CJK SC</string>
-            </test>
-            <edit name="family" binding="strong">
-              <string>Noto Sans CJK TC</string>
-            </edit>
-          </match>
+        <match target="pattern">
+          <test name="lang">
+            <string>zh-TW</string>
+          </test>
+          <test name="family">
+            <string>Noto Sans CJK SC</string>
+          </test>
+          <edit name="family" binding="strong">
+            <string>Noto Sans CJK TC</string>
+          </edit>
+        </match>
 
-          <match target="pattern">
-            <test name="lang">
-              <string>zh-TW</string>
-            </test>
-            <test name="family">
-              <string>Noto Serif CJK SC</string>
-            </test>
-            <edit name="family" binding="strong">
-              <string>Noto Serif CJK TC</string>
-            </edit>
-          </match>
+        <match target="pattern">
+          <test name="lang">
+            <string>zh-TW</string>
+          </test>
+          <test name="family">
+            <string>Noto Serif CJK SC</string>
+          </test>
+          <edit name="family" binding="strong">
+            <string>Noto Serif CJK TC</string>
+          </edit>
+        </match>
 
-          <match target="pattern">
-            <test name="lang">
-              <string>zh-TW</string>
-            </test>
-            <test name="family">
-              <string>Noto Sans Mono CJK SC</string>
-            </test>
-            <edit name="family" binding="strong">
-              <string>Noto Sans Mono CJK TC</string>
+        <match target="pattern">
+          <test name="lang">
+            <string>zh-TW</string>
+          </test>
+          <test name="family">
+            <string>Noto Sans Mono CJK SC</string>
+          </test>
+          <edit name="family" binding="strong">
+            <string>Noto Sans Mono CJK TC</string>
             </edit>
           </match>
 

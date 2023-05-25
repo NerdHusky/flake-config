@@ -84,7 +84,11 @@ in
 		  exa --color=always --group-directories-first --icons --across $argv
 		'';
 
-		# shellInit = "starship init fish | source";
+		# interactiveShellInit = ''
+  #     set -g EDITOR hx
+  #     set -g BROWSER brave
+  #     set -g TERMINAL alacritty
+  #   '';
 				
   #     # Disable greeting
   #     fish_greeting = "";
