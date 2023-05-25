@@ -48,7 +48,6 @@
       mkHome = modules: pkgs: home-manager.lib.homeManagerConfiguration {
         inherit modules pkgs;
         extraSpecialArgs = { inherit inputs outputs; };
-       # home-manager.users.carlo.imports = [ (import ./home/carlo/phoenix.nix) ];
       };
     in
     {

@@ -10,6 +10,7 @@ in
     # ../features/cli
     # ../features/nvim
     (./features/helix)
+    ./features/cli
   ];
   # ] ++ (builtins.attrValues outputs.homeManagerModules);
 
