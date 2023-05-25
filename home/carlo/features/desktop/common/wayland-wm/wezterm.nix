@@ -40,7 +40,8 @@ in
     };
     extraConfig = /* lua */ ''
       return {
-        font = wezterm.font("${config.fontProfiles.monospace.family}"),
+        # font = wezterm.font("${config.fontProfiles.monospace.family}"),
+        font = wezterm.font("FiraCode Nerd Font"),
         font_size = 12.0,
         color_scheme = "${colorscheme.slug}",
         hide_tab_bar_if_only_one_tab = true,

@@ -8,7 +8,8 @@ in {
         "${config.gtk.iconTheme.package}/share/icons/Papirus-Dark"
       else
         "${config.gtk.iconTheme.package}/share/icons/Papirus-Light";
-    font = "${config.fontProfiles.regular.family} 12";
+    # font = "${config.fontProfiles.regular.family} 12";
+    font = "Fira Sans 12";
     padding = "10,20";
     anchor = "top-center";
     width = 400;

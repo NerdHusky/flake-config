@@ -5,7 +5,8 @@ in {
     enable = true;
     options = {
       selection-clipboard = "clipboard";
-      font = "${config.fontProfiles.regular.family} 12";
+      # font = "${config.fontProfiles.regular.family} 12";
+      font = "Fira Sans 12";
       recolor = true;
       default-bg = "#${colors.base00}";
       default-fg = "#${colors.base01}";

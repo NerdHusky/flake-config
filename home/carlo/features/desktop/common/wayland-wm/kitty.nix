@@ -18,7 +18,7 @@ in
   programs.kitty = {
     enable = true;
     font = {
-      name = config.fontProfiles.monospace.family;
+      name = "FiraCode Nerd Fonts";
       size = 12;
     };
     settings = {
