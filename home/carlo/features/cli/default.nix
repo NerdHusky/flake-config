@@ -14,7 +14,7 @@
     # ./screen.nix
     # ./shellcolor.nix
     # ./ssh.nix
-    # ./starship.nix
+    ./starship.nix
     # ./xpo.nix
   ];
 

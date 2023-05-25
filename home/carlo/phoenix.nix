@@ -7,9 +7,8 @@ in
   imports = [
     # inputs.impermanence.nixosModules.home-manager.impermanence
     inputs.nix-colors.homeManagerModule
-    # ../features/cli
     # ../features/nvim
-    (./features/helix)
+    ./features/helix
     ./features/cli
   ];
   # ] ++ (builtins.attrValues outputs.homeManagerModules);

@@ -32,9 +32,9 @@ in
       # hm = "home-manager --flake .";
       # hms = "home-manager --flake . switch";
 
-      ls = mkIf hasExa "exa -al --color=always --group-directories-first --icons'";
+      # ls = mkIf hasExa "exa -al --color=always --group-directories-first --icons";
 
-			l = mkIf hasExa "exa -ahl --color=always --group-directories-first --icons' --wraps='ls -ahl'";
+			# l = mkIf hasExa "exa -ahl --color=always --group-directories-first --icons";
 
       # e = mkIf hasEmacs "emacsclient -t";
 
@@ -48,6 +48,8 @@ in
 
       # cik = mkIf hasKitty "clone-in-kitty --type os-window";
       # ck = cik;
+			l = mkIf hasExa "exa -lhg";
+			ll = mkIf hasExa "exa -lhng";
     };
     # shellAliases = {
     #   # Clear screen and scrollback
@@ -77,6 +79,12 @@ in
 	    bind ! bind_bang
 	    bind '$' bind_dollar
 		'';
+
+		ls = ''
+		  exa --color=always --group-directories-first --icons --across $argv
+		'';
+
+		# shellInit = "starship init fish | source";
 				
   #     # Disable greeting
   #     fish_greeting = "";
@@ -95,35 +103,35 @@ in
   #       ${shellcolor} apply $fish_pid
   #     '';
     };
-		interactiveShellInit = ''
-			set -l blue 89b4fa
-			set -l gray 6c7086
-			# Syntax Highlighting
-			set -g fish_color_normal $foreground
-			set -g fish_color_command $blue
-			set -g fish_color_param $flamingo
-			set -g fish_color_keyword $red
-			set -g fish_color_quote $green
-			set -g fish_color_redirection $pink
-			set -g fish_color_end $peach
-			set -g fish_color_error $red
-			set -g fish_color_gray $gray
-			set -g fish_color_selection --background=$selection
-			set -g fish_color_search_match --background=$selection
-			set -g fish_color_operator $pink
-			set -g fish_color_escape $flamingo
-			set -g fish_color_autosuggestion $gray
-			set -g fish_color_cancel $red
-			# Prompt
-			set -g fish_color_cwd $yellow
-			set -g fish_color_user $teal
-			set -g fish_color_host $blue
-			# Completion Pager
-			set -g fish_pager_color_progress $gray
-			set -g fish_pager_color_prefix $pink
-			set -g fish_pager_color_completion $foreground
-			set -g fish_pager_color_description $gray
-		'';
+		# interactiveShellInit = ''
+		# 	set -l blue 89b4fa
+		# 	set -l gray 6c7086
+		# 	# Syntax Highlighting
+		# 	set -g fish_color_normal $foreground
+		# 	set -g fish_color_command $blue
+		# 	set -g fish_color_param $flamingo
+		# 	set -g fish_color_keyword $red
+		# 	set -g fish_color_quote $green
+		# 	set -g fish_color_redirection $pink
+		# 	set -g fish_color_end $peach
+		# 	set -g fish_color_error $red
+		# 	set -g fish_color_gray $gray
+		# 	set -g fish_color_selection --background=$selection
+		# 	set -g fish_color_search_match --background=$selection
+		# 	set -g fish_color_operator $pink
+		# 	set -g fish_color_escape $flamingo
+		# 	set -g fish_color_autosuggestion $gray
+		# 	set -g fish_color_cancel $red
+		# 	# Prompt
+		# 	set -g fish_color_cwd $yellow
+		# 	set -g fish_color_user $teal
+		# 	set -g fish_color_host $blue
+		# 	# Completion Pager
+		# 	set -g fish_pager_color_progress $gray
+		# 	set -g fish_pager_color_prefix $pink
+		# 	set -g fish_pager_color_completion $foreground
+		# 	set -g fish_pager_color_description $gray
+		# '';
   #   interactiveShellInit =
   #     # Open command buffer in vim when alt+e is pressed
   #     ''
@@ -173,5 +181,5 @@ in
   #       set -U fish_pager_color_prefix        'white' '--bold' '--underline'
   #       set -U fish_pager_color_progress      'brwhite' '--background=cyan'
   #     '';
-  # };
+  };
 }

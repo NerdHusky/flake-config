@@ -17,7 +17,6 @@
       ./users.nix
       
       (../../modules/fonts)
-      # (../../modules/fish)
       
      inputs.home-manager.nixosModules.home-manager
     ];

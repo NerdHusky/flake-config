@@ -52,6 +52,7 @@ in
       # bootstrap-studio
       appimage-run
       glxinfo
+      authy
 
       home-manager
     ];
