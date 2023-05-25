@@ -1,4 +1,4 @@
-{ home, colorscheme, wallpaper }:
+{ home, colorscheme }:
 let
   inherit (home.sessionVariables) TERMINAL BROWSER EDITOR;
 in
@@ -76,7 +76,7 @@ in
 
   # Startup
   exec-once=waybar
-  exec=swaybg -i ${wallpaper} --mode fill
+  exec=swaybg -i $(wallpaper) --mode fill
   exec-once=mako
   exec-once=swayidle -w
 

@@ -22,8 +22,8 @@ in
   # After 10 seconds of locked, mute mic
   (mkEvent 10 "${pactl} set-source-mute @DEFAULT_SOURCE@ yes" "${pactl} set-source-mute @DEFAULT_SOURCE@ no") +
   # If has RGB, turn it off 20 seconds after locked
-  lib.optionalString config.services.rgbdaemon.enable
-    (mkEvent 20 "systemctl --user stop rgbdaemon" "systemctl --user start rgbdaemon") +
+  # lib.optionalString config.services.rgbdaemon.enable
+  #   (mkEvent 20 "systemctl --user stop rgbdaemon" "systemctl --user start rgbdaemon") +
   # Hyprland - Turn off screen (DPMS)
   lib.optionalString config.wayland.windowManager.hyprland.enable
     (let hyprctl = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl";

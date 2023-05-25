@@ -11,7 +11,7 @@
   ];
 
   # wallpaper = outputs.wallpapers.temple-fantasy-blue;
-  wallpaper = ./wallpaper.png;
+  wallpaper = import ./wallpaper.png;
   # colorscheme = inputs.nix-colors.colorSchemes.tokyo-city-terminal-dark;
   colorscheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 

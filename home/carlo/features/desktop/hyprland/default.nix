@@ -25,7 +25,7 @@
   };
 
   home.packages = with pkgs; [
-    inputs.hyprwm-contrib.packages.${system}.grimblast
+    inputs.hypr-contrib.packages.${system}.grimblast
     swaybg
     swayidle
     # TODO
@@ -45,7 +45,7 @@
       #   inherit (config) monitors;
       # }) +
       (import ./config.nix {
-        inherit (config) home colorscheme wallpaper;
+        inherit (config) home colorscheme;
       });
   };
 }

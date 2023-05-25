@@ -65,7 +65,7 @@ in
         height = 40;
         margin = "6";
         position = "top";
-        output = builtins.map (m: m.name) (builtins.filter (m: ! m.noBar) config.monitors);
+        # output = builtins.map (m: m.name) (builtins.filter (m: ! m.noBar) config.monitors);
         modules-left = [
           "custom/menu"
           "custom/currentplayer"
@@ -227,24 +227,24 @@ in
           };
           on-click = mail;
         };
-        "custom/gpg-agent" = {
-          interval = 2;
-          return-type = "json";
-          exec =
-            let gpgCmds = import ../../../cli/gpg-commands.nix { inherit pkgs; };
-            in
-            jsonOutput "gpg-agent" {
-              pre = ''status=$(${gpgCmds.isUnlocked} && echo "unlocked" || echo "locked")'';
-              alt = "$status";
-              tooltip = "GPG is $status";
-            };
-          format = "{icon}";
-          format-icons = {
-            "locked" = "";
-            "unlocked" = "";
-          };
-          on-click = "";
-        };
+        # "custom/gpg-agent" = {
+        #   interval = 2;
+        #   return-type = "json";
+        #   exec =
+        #     let gpgCmds = import ../../../cli/gpg-commands.nix { inherit pkgs; };
+        #     in
+        #     jsonOutput "gpg-agent" {
+        #       pre = ''status=$(${gpgCmds.isUnlocked} && echo "unlocked" || echo "locked")'';
+        #       alt = "$status";
+        #       tooltip = "GPG is $status";
+        #     };
+        #   format = "{icon}";
+        #   format-icons = {
+        #     "locked" = "";
+        #     "unlocked" = "";
+        #   };
+        #   on-click = "";
+        # };
         "custom/gamemode" = {
           exec-if = "${gamemoded} --status | grep 'is active' -q";
           interval = 2;
@@ -339,8 +339,8 @@ in
     # x y z -> top, horizontal, bottom
     # w x y z -> top, right, bottom, left
     style = let inherit (config.colorscheme) colors; in /* css */ ''
-      * {
-        # font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
+       {
+        # font-family: {config.fontProfiles.regular.family}, {config.fontProfiles.monospace.family};
         font-family: "Fira Sans", "FiraCode Nerd Font";
         font-size: 12pt;
         padding: 0 8px;

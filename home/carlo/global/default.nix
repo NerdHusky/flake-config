@@ -48,7 +48,8 @@ in
     sessionVariables = {
       EDITOR = "hx";
       BROWSER = "brave";
-      TERMINAL = "alacritty";
+      # TERMINAL = "alacritty";
+      TERMINAL = lib.mkDefault "kitty";
     };
 
   #   persistence = {

@@ -18,7 +18,7 @@ in
   programs.kitty = {
     enable = true;
     font = {
-      name = "FiraCode Nerd Fonts";
+      name = "FiraCode Nerd Font";
       size = 12;
     };
     settings = {
