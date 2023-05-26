@@ -1,7 +1,7 @@
 { config, ... }:
 let inherit (config.colorscheme) colors kind;
 in {
-  service.mako = {
+  services.mako = {
     enable = true;
     iconPath =
       if kind == "dark" then

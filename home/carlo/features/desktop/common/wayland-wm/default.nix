@@ -10,6 +10,7 @@
     ./waybar.nix
     ./wofi.nix
     ./zathura.nix
+    ./wezterm.nix
   ];
 
   home.packages = with pkgs; [

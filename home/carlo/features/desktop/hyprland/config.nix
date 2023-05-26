@@ -61,7 +61,7 @@ in
   }
 
   input {
-    kb_layout=br,us
+    kb_layout=us
     touchpad {
       disable_while_typing=false
     }
@@ -76,7 +76,7 @@ in
 
   # Startup
   exec-once=waybar
-  exec=swaybg -i $(wallpaper) --mode fill
+  exec=swaybg -i ${../../../wallpaper.png} --mode fill
   exec-once=mako
   exec-once=swayidle -w
 
