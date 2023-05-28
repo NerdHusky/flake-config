@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { pkgs, inputs, ... }:
-
+# let
+#   x = services.xserver.displayManager.session;
+# in
 {
   imports =
     [ 
@@ -56,6 +58,21 @@
   services.xserver.xkbOptions = "caps:escape";
 
   # services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.session = [
+    {
+      manage = "desktop";
+      name = "awesome";
+      start = "${pkgs.awesome}/bin/awesome";
+    }
+  ];
+  # x = x ++ [
+  #   {
+  #     manage = "desktop";
+  #     name = "awesome";
+  #     start = "${pkgs.awesome}/bin/awesome";
+  #   }
+  # ];
+  
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
@@ -80,7 +97,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    # neovim
+    neovim
     # helix
     neofetch
     pipes

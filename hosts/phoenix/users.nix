@@ -33,6 +33,7 @@ in
     
     packages = with pkgs; [
       brave
+      google-chrome
       aichat
       tdesktop
       element-desktop
