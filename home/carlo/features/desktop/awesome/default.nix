@@ -1,6 +1,6 @@
 {imports, config, pkgs, ...}:
 {
-	xsession.windowManger.awesome = {
+	xsession.windowManager.awesome = {
 		enable = true;
 		package = pkgs.awesome;
 		luaModules = with pkgs; [
