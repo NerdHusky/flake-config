@@ -28,6 +28,7 @@ in
       window_padding_width = 15;
       foreground = "#${colors.base05}";
       background = "#${colors.base00}";
+      background_opacity = "0.75";
       selection_background = "#${colors.base05}";
       selection_foreground = "#${colors.base00}";
       url_color = "#${colors.base04}";

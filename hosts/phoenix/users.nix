@@ -53,6 +53,7 @@ in
       appimage-run
       glxinfo
       authy
+      gnome.gnome-tweaks
 
       home-manager
     ];

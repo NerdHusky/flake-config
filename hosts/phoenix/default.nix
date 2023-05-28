@@ -15,6 +15,7 @@
       ./sops.nix
       ./virtualization.nix
       ./users.nix
+      ./nvidia.nix
       
       (../../modules/fonts)
       
@@ -68,9 +69,9 @@
   nixpkgs.config.allowUnfree = true;
   
   # Nvidia dkms?!?
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.opengl.enable = true;
-  hardware.nvidia.modesetting.enable = true;
+  # services.xserver.videoDrivers = [ "nvidia" ];
+  # hardware.opengl.enable = true;
+  # hardware.nvidia.modesetting.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-12.2.3"
@@ -93,10 +94,9 @@
     aria
     ranger
     tmux
-    # exa
-
-    # xwayland
-
+    nix-index
+    pciutils
+    cudaPackages.cudatoolkit
  ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -144,6 +144,7 @@
     enable = true;
     memoryPercent = 40;
     priority = 10;
+    algorithm = "zstd";
   };
 
   # This value determines the NixOS release from which the default

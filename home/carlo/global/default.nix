@@ -49,7 +49,7 @@ in
       EDITOR = "hx";
       BROWSER = "brave";
       # TERMINAL = "alacritty";
-      TERMINAL = lib.mkDefault "kitty";
+      # TERMINAL = lib.mkDefault "kitty";
     };
 
   #   persistence = {

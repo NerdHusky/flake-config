@@ -35,27 +35,35 @@
     GTK_THEME = "Catppuccin-Mocha-Blue";
   };
   home.pointerCursor = {
-    package = pkgs.catppuccin-cursors;
-    name = "Catppuccin-Mocha-Dark";
+    package = pkgs.catppuccin-cursors.mochaLight;
+    name = "Catppuccin-Mocha-Light";
     size = 16;
   };
   home.pointerCursor.gtk.enable = true;
   gtk = {
     enable = true;
+
     theme = {
-      name = "Catppuccin-Mocha_Blue";
-      package = pkgs.catppuccin-gtk;
+      name = "Catppuccin-Mocha-Blue";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "blue" ];
+        size = "compact";
+        tweaks = [ "rimless" "black" ];
+        variant = "mocha";
+      };
     };
+
     cursorTheme = {
-      name = "Catppuccin-Mocha-Dark";
+      name = "Catppuccin-Mocha-Light";
     };
+
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
 
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = "FiraCode Nerd Font";
       size = 12;
     };
     gtk3.extraConfig = {
@@ -77,6 +85,7 @@
     settings = {
       "Net/ThemeName" = "Catppuccin-Mocha-Blue";
       "Net/IconThemeName" = "Papirus-Dark";
+      "Gtk/CursorThemeName" = "Catppuccin-Mocha-Light-Cursors";
     };
   };
 }
