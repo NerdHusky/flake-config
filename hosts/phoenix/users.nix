@@ -42,7 +42,6 @@ in
       libreoffice-fresh
       mpv
       vlc
-      # alacritty
       kitty
       imv
       vlc
@@ -55,6 +54,46 @@ in
       glxinfo
       authy
       gnome.gnome-tweaks
+
+      airgeddon
+      aircrack-ng
+      coreutils-full
+      curl
+      gawk
+      glibc
+      gnugrep
+      gnused
+      iproute2
+      iw
+      ncurses
+      procps
+      usbutils
+      ethtool
+      util-linux
+      ccze
+      bully
+      pixiewps
+      reaverwps-t6x
+      asleap
+      crunch
+      hashcat
+      hcxdumptool
+      hcxtools
+      john
+      wireshark-cli
+      bettercap
+      dhcp
+      dnsmasq
+      ettercap
+      hostapd
+      lighttpd
+      openssl
+      mdk4
+      nftables
+      apparmor-bin-utils
+      xterm
+      xorg.xset
+      xorg.xdpyinfo
 
       home-manager
     ];
