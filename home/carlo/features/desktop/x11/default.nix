@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./polybar.nix
+    ./polybar
   ];
 
   # home.packages = with pkgs; [

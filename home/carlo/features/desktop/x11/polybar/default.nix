@@ -1,27 +1,49 @@
+let
+	colors = {
+		disabled = "#707880";
+		Rosewater = "#f5e0dc";
+		Flamingo = "#f2cdcd";
+		Pink = "#f5c2e7";
+		Mauve = "#cba6f7";
+		Red = "#f38ba8";
+		Maroon = "#eba0ac";
+		Peach = "#fab387";
+		Yellow = "#f9e2af";
+		Green = "#a6e3a1";
+		Teal = "#94e2d5";
+		Sky = "#89dceb";
+		Sapphire = "#74c7ec";
+		Blue = "#89b4fa";
+		Lavender = "#b4befe";
+		Base = "#1e1e2e";
+		Mantle = "#181825";
+	};
+in
 {
 	services.polybar = {
 		enable = true;
+		script = "";
 		
 		config = {
-			"colors" = {
-				disabled = "#707880";
-				Rosewater = "#f5e0dc";
-				Flamingo = "#f2cdcd";
-				Pink = "#f5c2e7";
-				Mauve = "#cba6f7";
-				Red = "#f38ba8";
-				Maroon = "#eba0ac";
-				Peach = "#fab387";
-				Yellow = "#f9e2af";
-				Green = "#a6e3a1";
-				Teal = "#94e2d5";
-				Sky = "#89dceb";
-				Sapphire = "#74c7ec";
-				Blue = "#89b4fa";
-				Lavender = "#b4befe";
-				Base = "#1e1e2e";
-				Mantle = "#181825";
-			};
+			# "colors" = {
+			# 	disabled = "#707880";
+			# 	Rosewater = "#f5e0dc";
+			# 	Flamingo = "#f2cdcd";
+			# 	Pink = "#f5c2e7";
+			# 	Mauve = "#cba6f7";
+			# 	Red = "#f38ba8";
+			# 	Maroon = "#eba0ac";
+			# 	Peach = "#fab387";
+			# 	Yellow = "#f9e2af";
+			# 	Green = "#a6e3a1";
+			# 	Teal = "#94e2d5";
+			# 	Sky = "#89dceb";
+			# 	Sapphire = "#74c7ec";
+			# 	Blue = "#89b4fa";
+			# 	Lavender = "#b4befe";
+			# 	Base = "#1e1e2e";
+			# 	Mantle = "#181825";
+			# };
 			"bar/left" = {
 				width = "16%";
 				offset-x = "1%";
@@ -34,7 +56,7 @@
 				line-size = "1pt";
 
 				font-0 = "RobotoMono Nerd Font:weight=bold:size=9;2";
-gammastep				font-1 = "RobotoMono Nerd Font:size=10;3";
+				font-1 = "RobotoMono Nerd Font:size=10;3";
 				font-2 = "RobotoMono Nerd Font:size=11;3";
 				font-3 = "NotoEmoji:scale=11;3";
 				font-4 = "Noto Sans CJK JP:size=10;3";
@@ -196,7 +218,7 @@ gammastep				font-1 = "RobotoMono Nerd Font:size=10;3";
 				format-connected-foreground = "${colors.Lavender}";
 			};
 			"module/wlan" = {
-				inherit = "network-base";
+				"inherit" = "network-base";
 				interface-type = "wireless";
 				label-connected-font = "3";
 				label-connected = " ";
@@ -288,10 +310,12 @@ gammastep				font-1 = "RobotoMono Nerd Font:size=10;3";
 		};
 		
 		extraConfig = ''
-			[settings]
-			screenchange-reload = true
-			pseudo-transparency = true
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
 		'';
 	};
+	home.file.".config/polybar/weather.py".source = ./weather.py;
+	home.file.".config/polybar/weather.sh".source = ./weather.sh;
 }
 

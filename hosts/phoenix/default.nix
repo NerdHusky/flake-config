@@ -115,6 +115,7 @@
     pciutils
     cudaPackages.cudatoolkit
     electron_22
+    python311
  ];
 
   # Some programs need SUID wrappers, can be configured further or are

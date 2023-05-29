@@ -3,6 +3,7 @@
 
   imports = [
     ../common
+		../x11
     # ../common/wayland-wm
     # inputs.hyprland.homeManagerModules.default
   ];
