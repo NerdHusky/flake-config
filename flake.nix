@@ -68,7 +68,14 @@
       devShells = forEachPkgs (pkgs: import ./shell.nix { inherit pkgs; });
       formatter = forEachPkgs (pkgs: pkgs.nixpkgs-fmt);
       # Your custom packages and modifications, exported as overlays
-      overlays = import ./overlays { inherit inputs; };
+      # overlays = import ./overlays { inherit inputs; };
+      overlays =
+      # Apply each overlay found in the /overlays directory
+      let path = ../overlays; in with builtins;
+      map (n: import (path + ("/" + n)))
+          (filter (n: match ".*\\.nix" n != null ||
+                      pathExists (path + ("/" + n + "/default.nix")))
+                  (attrNames (readDir path)));
       # Reusable nixos modules you might want to export
       # These are usually stuff you would upstream into nixpkgs
       # nixosModules = import ./modules/nixos;
