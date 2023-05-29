@@ -2,6 +2,8 @@
 {
   imports = [
     ./polybar
+    ./picom.nix
+    ./alacritty.nix
   ];
 
   # home.packages = with pkgs; [

@@ -16,6 +16,11 @@
 			luajitPackages.luadbi-mysql
 			lua-language-server
 		];
+			
 		noArgb = false;
 	};
+
+	home.packages = with pkgs; [
+		betterlockscreen
+	];
 }

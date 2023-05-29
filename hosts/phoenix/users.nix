@@ -42,7 +42,7 @@ in
       libreoffice-fresh
       mpv
       vlc
-      alacritty
+      # alacritty
       kitty
       imv
       vlc
