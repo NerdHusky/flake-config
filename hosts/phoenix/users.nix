@@ -49,7 +49,7 @@ in
       smplayer
       qbittorrent
       vscode
-      etcher
+      # etcher
       # bootstrap-studio
       appimage-run
       glxinfo

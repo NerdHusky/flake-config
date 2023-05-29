@@ -36,7 +36,7 @@
   };
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors.mochaLight;
-    name = "Catppuccin-Mocha-Light";
+    name = "Catppuccin-Mocha-Light-Cursors";
     size = 16;
   };
   home.pointerCursor.gtk.enable = true;
@@ -54,7 +54,7 @@
     };
 
     cursorTheme = {
-      name = "Catppuccin-Mocha-Light";
+      name = "Catppuccin-Mocha-Light-Cursors";
     };
 
     iconTheme = {
@@ -85,7 +85,9 @@
     settings = {
       "Net/ThemeName" = "Catppuccin-Mocha-Blue";
       "Net/IconThemeName" = "Papirus-Dark";
-      "Gtk/CursorThemeName" = "Catppuccin-Mocha-Light-Cursors";
+      "Net/CursorThemeName" = "Catppuccin-Mocha-Light-Cursors";
+      # "Gtk/CursorThemeName" = "Catppuccin-Mocha-Light-Cursors";
+      # "Gtk-3.0/CursorThemeName" = "Catppuccin-Mocha-Light-Cursors";
     };
   };
 }

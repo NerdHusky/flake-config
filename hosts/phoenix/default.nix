@@ -90,9 +90,9 @@
   # hardware.opengl.enable = true;
   # hardware.nvidia.modesetting.enable = true;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-12.2.3"
-  ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "electron-12.2.3"
+  # ];
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
@@ -114,6 +114,7 @@
     nix-index
     pciutils
     cudaPackages.cudatoolkit
+    electron_22
  ];
 
   # Some programs need SUID wrappers, can be configured further or are

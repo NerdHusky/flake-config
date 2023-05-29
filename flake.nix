@@ -49,6 +49,7 @@
         inherit modules pkgs;
         extraSpecialArgs = { inherit inputs outputs; };
       };
+      # selfPkgs = import ./pkgs;
     in
     {
       # Your custom packages

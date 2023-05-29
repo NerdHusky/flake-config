@@ -38,5 +38,7 @@
 		GBM_BACKEND = "nvidia-drm";
 		__GLX_VENDOR_LIBRARY_NAME = "nvidia";
 		WLR_NO_HARDWARE_CURSORS = 1;
+    NIXOS_OZONE_WL = "1";
+    # GDK_BACKEND = "x11";
   };
 }

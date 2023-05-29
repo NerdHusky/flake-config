@@ -48,8 +48,8 @@ in
 
       # cik = mkIf hasKitty "clone-in-kitty --type os-window";
       # ck = cik;
-			l = mkIf hasExa "exa -lhg";
-			ll = mkIf hasExa "exa -lhng";
+			l = mkIf hasExa "exa -lag";
+			ll = mkIf hasExa "exa -lang";
     };
     # shellAliases = {
     #   # Clear screen and scrollback
