@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, inputs,/* outputs,*/ ... }:
+{ pkgs, inputs, outputs, ... }:
 # let
 #   x = services.xserver.displayManager.session;
 # in
@@ -77,7 +77,7 @@
 
   ### UNFREE
   nixpkgs.config.allowUnfree = true;
-  # nixpkgs.overlays = builtins.attrValues outputs.overlays;
+  nixpkgs.overlays = builtins.attrValues outputs.overlays;
   
   # Nvidia dkms?!?
   # services.xserver.videoDrivers = [ "nvidia" ];
