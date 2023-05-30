@@ -11,7 +11,7 @@
     hypr-contrib.url = "github:hyprwm/contrib";
     flake-parts.url = "github:hercules-ci/flake-parts";
     sops-nix.url = "github:Mic92/sops-nix";
-    nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
+    # nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
     
     hyprland = {
       url = "github:hyprwm/Hyprland";
@@ -26,7 +26,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, nixpkgs-f2k, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, ... }@inputs:
     let
       inherit (self) outputs;
       forEachSystem = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ];
@@ -58,7 +58,7 @@
       # devShells = forEachPkgs (pkgs: import ./shell.nix { inherit pkgs; });
       formatter = forEachPkgs (pkgs: pkgs.nixpkgs-fmt);
       # Your custom packages and modifications, exported as overlays
-      overlays = import ./overlays.nix  { inherit inputs; };
+      overlays = import ./overlays /* { inherit outputs; }*/;
       # overlays =
       # # Apply each overlay found in the /overlays directory
       # let path = ./overlays; in with builtins;

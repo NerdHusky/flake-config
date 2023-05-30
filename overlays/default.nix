@@ -1,4 +1,5 @@
-(outputs, inputs):
+# (outputs, inputs):
+# (outputs):
 # {electron}:
 {
   # awesome = final: prev: prev.awesome.overrideAttrs (old: {

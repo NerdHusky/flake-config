@@ -56,7 +56,7 @@ in
       authy
       gnome.gnome-tweaks
       nix-prefetch
-      nixpkgs.overlays.picom-pijulius
+      picom-pijulius
       # awesome
 
       airgeddon
