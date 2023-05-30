@@ -15,6 +15,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 -- Declarative object management
 local ruled = require("ruled")
+-- local ruled_client = require("awful.rules")
+-- local ruled_notification = require("ruled.notification")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -25,13 +27,13 @@ local dpi = beautiful.xresources.apply_dpi
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
-naughty.connect_signal("request::display_error", function(message, startup)
-  naughty.notification {
-    urgency = "critical",
-    title   = "Oops, an error happened" .. (startup and " during startup!" or "!"),
-    message = message
-  }
-end)
+-- naughty.connect_signal("request::display_error", function(message, startup)
+--   naughty.notification {
+--     urgency = "critical",
+--     title   = "Oops, an error happened" .. (startup and " during startup!" or "!"),
+--     message = message
+--   }
+-- end)
 -- }}}
 
 -- {{{ Variable definitions
@@ -110,11 +112,11 @@ end)
 -- }}}
 
 -- {{{ Mouse bindings
-awful.mouse.append_global_mousebindings({
-  awful.button({ }, 3, function () mymainmenu:toggle() end),
-  awful.button({}, 4, awful.tag.viewprev),
-  awful.button({}, 5, awful.tag.viewnext),
-})
+-- awful.mouse.append_global_mousebindings({
+--   awful.button({ }, 3, function () mymainmenu:toggle() end),
+--   awful.button({}, 4, awful.tag.viewprev),
+--   awful.button({}, 5, awful.tag.viewnext),
+-- })
 -- }}}
 
 -- {{{ Calendar widget
@@ -369,6 +371,7 @@ end)
 
 -- {{{ Rules
 -- Rules to apply to new clients.
+-- ruled.client.connect_signal("request::rules", function()
 ruled.client.connect_signal("request::rules", function()
   -- All clients will match this rule.
   ruled.client.append_rule {

@@ -3,7 +3,7 @@
   imports = [
     ./global
     ./features/desktop/hyprland
-    ./features/desktop/awesome
+    # ./features/desktop/awesome
     # ./features/rgb
     # ./features/productivity
     # ./features/pass

@@ -1,6 +1,9 @@
+{pkgs,/*nixpkgs-f2k,*/ ...}:
 {
 	services.picom = {
-		enable = true;
+		# enable = true;
+		# package = pkgs.picom-pijulius;
+		# package = nixpkgs-f2k.picom-pijulius;
 
 		settings = {
 			# {{{ General

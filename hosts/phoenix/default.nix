@@ -58,14 +58,7 @@
   services.xserver.xkbOptions = "caps:escape";
 
   # services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.session = [
-    {
-      manage = "desktop";
-      name = "awesome";
-      start = "${pkgs.awesome}/bin/awesome";
-    }
-  ];
-  # x = x ++ [
+  # services.xserver.displayManager.session = [
   #   {
   #     manage = "desktop";
   #     name = "awesome";

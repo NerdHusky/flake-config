@@ -31,7 +31,6 @@
     httpie # Better curl
     diffsitter # Better diff
     jq # JSON pretty printer and manipulator
-    p7zip
 
     nil # Nix LSP
     nixfmt # Nix formatter

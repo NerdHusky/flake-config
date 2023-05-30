@@ -1,0 +1,11 @@
+
+final: prev: {
+  awesome = prev.awesome.overrideAttrs (old: {
+    src = prev.fetchFromGitHub {
+      owner = "awesomeWM";
+      repo = "awesome";
+      rev = "485661b706752212dac35e91bb24a0e16a677b70";
+      sha256 = "0000000000000000000000000000000000000000000";
+    };
+  });
+}

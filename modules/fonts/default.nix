@@ -12,6 +12,7 @@
       fira
       nerdfonts
       twemoji-color-font
+      # google-fonts
     ];
     fontconfig = {
       localConf = ''
@@ -34,7 +35,7 @@
               <string>sans-serif</string>
             </test>
             <edit name="family" mode="prepend" binding="strong">
-              <string>Fira Sans</string>
+              <string>Noto Sans</string>
               <string>Twemoji</string>
             </edit>
           </match>

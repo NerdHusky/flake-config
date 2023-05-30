@@ -3,6 +3,7 @@
 let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
+  nixpkgs.overlays = builtins.attrValues outputs.overlays;
   ### Users  
   users.mutableUsers  = false;
 
@@ -54,6 +55,9 @@ in
       glxinfo
       authy
       gnome.gnome-tweaks
+      nix-prefetch
+      nixpkgs.overlays.picom-pijulius
+      # awesome
 
       airgeddon
       aircrack-ng
