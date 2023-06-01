@@ -3,7 +3,8 @@
 let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
-  nixpkgs.overlays = builtins.attrValues outputs.overlays;
+  ### IMPORTANT IF WANT TO USE OVERLAYS!!
+  # nixpkgs.overlays = builtins.attrValues outputs.overlays;
   ### Users  
   users.mutableUsers  = false;
 
@@ -57,7 +58,8 @@ in
       gnome.gnome-tweaks
       nix-prefetch
       nix-prefetch-git
-      picom-pijulius
+      # picom-pijulius
+      picom-jonaburg
       python311Packages.ewmh
       qmk
       cairo
@@ -66,7 +68,7 @@ in
       # gccgo
       # lua
       # luarocks
-      awesome
+      # awesome
 
       airgeddon
       aircrack-ng
