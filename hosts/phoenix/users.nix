@@ -56,8 +56,17 @@ in
       authy
       gnome.gnome-tweaks
       nix-prefetch
+      nix-prefetch-git
       picom-pijulius
-      # awesome
+      python311Packages.ewmh
+      qmk
+      cairo
+      # gnumake42
+      # cmake
+      # gccgo
+      # lua
+      # luarocks
+      awesome
 
       airgeddon
       aircrack-ng

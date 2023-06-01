@@ -12,6 +12,7 @@
       fira
       nerdfonts
       twemoji-color-font
+      jetbrains-mono
       # google-fonts
     ];
     fontconfig = {
