@@ -58,6 +58,12 @@
   services.xserver.xkbOptions = "caps:escape";
 
   # services.xserver.displayManager.gdm.enable = true;
+  
+	services.xserver.windowManager.qtile = {
+		enable = true;
+		package = pkgs.qtile;
+		configFile = /home/carlo/.config/qtile/config.py;
+	}; 
   services.xserver.displayManager.session = [
     {
       manage = "desktop";

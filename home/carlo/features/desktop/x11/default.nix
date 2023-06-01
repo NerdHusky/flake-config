@@ -4,7 +4,7 @@
     # ./polybar
     ./picom.nix
     ./alacritty.nix
-    ./rofi
+    ./rofi.nix
   ];
 
   # home.packages = with pkgs; [
