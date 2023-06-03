@@ -62,7 +62,8 @@ in
       picom-jonaburg
       python311Packages.ewmh
       qmk
-      cairo
+      # vial
+      # cairo
       # gnumake42
       # cmake
       # gccgo

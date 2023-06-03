@@ -59,18 +59,18 @@
 
   # services.xserver.displayManager.gdm.enable = true;
   
-	services.xserver.windowManager.qtile = {
-		enable = true;
-		package = pkgs.qtile;
-		configFile = /home/carlo/.config/qtile/config.py;
-	}; 
-  services.xserver.displayManager.session = [
-    {
-      manage = "desktop";
-      name = "qtile";
-      start = "${pkgs.qtile}/bin/qtile";
-    }
-  ];
+	# services.xserver.windowManager.qtile = {
+	# 	enable = true;
+	# 	package = pkgs.qtile;
+	# 	configFile = /home/carlo/.config/qtile/config.py;
+	# }; 
+ #  services.xserver.displayManager.session = [
+ #    {
+ #      manage = "desktop";
+ #      name = "qtile";
+ #      start = "${pkgs.qtile}/bin/qtile";
+ #    }
+ #  ];
   
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -127,7 +127,8 @@
     electron_22
     python311
     python311Packages.pip
-    # samsung-unified-linux-driver
+    zip
+    unzip
  ];
 
   # Some programs need SUID wrappers, can be configured further or are
