@@ -105,31 +105,12 @@
   # ];
 
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    neovim
-    # helix
-    neofetch
-    pipes
-    matrixcli
-    killall
-    # ripgrep
-    git
-    btop
-    htop
-    hdparm
-    aria
-    ranger
-    tmux
-    nix-index
-    pciutils
     cudaPackages.cudatoolkit
-    electron_22
+    linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open
+    # electron_22
     python311
     python311Packages.pip
-    zip
-    unzip
- ];
+   ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

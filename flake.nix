@@ -29,6 +29,19 @@
   outputs = { self, nixpkgs, home-manager, nix-colors, ... }@inputs:
     let
       inherit (self) outputs;
+      system = "x86_64-linux";
+      # pkgs = import nixpkgs {
+      #   inherit system;
+      #   config.allowUnfree = true;
+      #   config.cudaSupport = true;
+      # };
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          self.overlays.default
+        ];
+      };
+
       forEachSystem = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ];
       forEachPkgs = f: forEachSystem (sys: f nixpkgs.legacyPackages.${sys});
 
@@ -87,5 +100,30 @@
         "carlo@phoenix" = mkHome [ ./home/carlo/phoenix.nix ] nixpkgs.legacyPackages."x86_64-linux";
       };
 
-    };
+
+      # devShells = {
+      #   cuda = with pkgs; mkShell {
+        
+      #   buildInputs = [
+      #     cudaPackages.cudatoolkit  
+      #     # linuxPackages.nvidia_x11
+      #     linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open
+      #     # cudaPackages.cudnn
+      #    procps gnumake util-linux m4 gperf unzip
+      #    libGLU libGL
+      #    xorg.libXi xorg.libXmu freeglut
+      #    xorg.libXext xorg.libX11 xorg.libXv xorg.libXrandr zlib 
+      #    ncurses5 binutils
+      # ];
+
+      #   shellHook = ''
+      #     export LD_LIBRARY_PATH="${pkgs.linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open}/lib"
+      #     export CUDA_PATH=${pkgs.cudaPackages.cudatoolkit}
+      #     export EXTRA_LDFLAGS="-L/lib -L${pkgs.linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open}/lib"
+      #     export EXTRA_CCFLAGS="-I/usr/include"  
+      #   '';          
+      #   };
+      # };
+    
+  };
 }

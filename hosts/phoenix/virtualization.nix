@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 {
 	virtualisation = {
-		docker.enable = true;
+		docker = {
+			
+			enable = true;
+			enableNvidia = true;
+		};
     
 		lxd = {
       enable = true;
@@ -22,6 +26,7 @@
 
   environment.systemPackages = with pkgs; [
     docker-compose
+		# nvidia-docker
 		virt-manager
 		qemu
   ];

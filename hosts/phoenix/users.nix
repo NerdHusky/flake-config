@@ -51,7 +51,9 @@ in
       qbittorrent
       vscode
       # etcher
-      # bootstrap-studio
+      unetbootin
+      usbimager
+      bootstrap-studio
       appimage-run
       glxinfo
       authy
@@ -59,9 +61,12 @@ in
       nix-prefetch
       nix-prefetch-git
       # picom-pijulius
-      picom-jonaburg
-      python311Packages.ewmh
+      # picom-jonaburg
+      # python311Packages.ewmh
       qmk
+      powerline
+
+      teamviewer
       # vial
       # cairo
       # gnumake42

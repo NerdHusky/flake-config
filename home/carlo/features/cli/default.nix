@@ -15,6 +15,7 @@
     # ./shellcolor.nix
     # ./ssh.nix
     ./starship.nix
+    ./tmux.nix
     # ./xpo.nix
   ];
 
@@ -34,6 +35,27 @@
 
     nil # Nix LSP
     nixfmt # Nix formatter
+
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    neovim
+    neofetch
+    pipes
+    matrixcli
+    killall
+    git
+    btop
+    htop
+    hdparm
+    aria
+    ranger
+    nix-index
+    pciutils
+    zip
+    unzip
+    pass
+    polkit
+    p7zip
 
     # ltex-ls # Spell checking LSP
   ];
