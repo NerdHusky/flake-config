@@ -57,6 +57,13 @@
     polkit
     p7zip
 
+    ### Programming, will find another place
+    nodejs_20
+    elixir
+    go
+    python311
+    rustup
+
     # ltex-ls # Spell checking LSP
   ];
 }
