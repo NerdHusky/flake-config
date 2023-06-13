@@ -107,6 +107,7 @@
   # ];
 
   environment.systemPackages = with pkgs; [
+    git
     cudaPackages.cudatoolkit
     linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open
     # electron_22
