@@ -95,6 +95,8 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = builtins.attrValues outputs.overlays;
   
+  systemd.services.nixos-upgrade.path = [ pkgs.git ];
+
   # Nvidia dkms?!?
   # services.xserver.videoDrivers = [ "nvidia" ];
   # hardware.opengl.enable = true;

@@ -38,6 +38,13 @@ in
   programs = {
     home-manager.enable = true;
     git.enable = true;
+
+    git.extraConfig = {
+      safe = {
+        # directory = "*";
+        directory = "/home/carlo/flake-config";
+      };
+    };
   };
 
   home = {
