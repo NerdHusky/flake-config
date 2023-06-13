@@ -41,8 +41,8 @@ in
 
     git.extraConfig = {
       safe = {
-        # directory = "*";
-        directory = "/home/carlo/flake-config";
+        directory = "*";
+        # directory = "/home/carlo/flake-config";
       };
     };
   };
