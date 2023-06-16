@@ -10,6 +10,7 @@
 		extraConfig = ''
 			source ${pkgs.powerline}/share/tmux/powerline.conf
 			set -g default-terminal "tmux-256color"
+			set-option -g mouse on
 		'';
 	};
 }

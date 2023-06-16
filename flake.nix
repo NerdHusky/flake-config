@@ -23,10 +23,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs"; 
+
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-colors, nix-doom-emacs, ... }@inputs:
     let
       inherit (self) outputs;
       system = "x86_64-linux";

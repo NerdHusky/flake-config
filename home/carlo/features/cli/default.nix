@@ -16,6 +16,7 @@
     # ./ssh.nix
     ./starship.nix
     ./tmux.nix
+    ./demacs.nix
     # ./xpo.nix
   ];
 
@@ -43,7 +44,7 @@
     pipes
     matrixcli
     killall
-    git
+    # git
     btop
     htop
     hdparm
@@ -56,13 +57,23 @@
     pass
     polkit
     p7zip
+    
+    fzf
+    # tldr
+    tealdeer
+    cht-sh
 
     ### Programming, will find another place
     nodejs_20
+    nodePackages.prettier
+    nodePackages.eslint
+    yarn
     elixir
     go
+    gopls
     python311
     rustup
+    mongodb-compass
 
     # ltex-ls # Spell checking LSP
   ];

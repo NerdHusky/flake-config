@@ -4,7 +4,7 @@ let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.
 in
 {
   ### IMPORTANT IF WANT TO USE OVERLAYS!!
-  # nixpkgs.overlays = builtins.attrValues outputs.overlays;
+  nixpkgs.overlays = builtins.attrValues outputs.overlays;
   ### Users  
   users.mutableUsers  = false;
 
@@ -36,10 +36,12 @@ in
     packages = with pkgs; [
       brave
       google-chrome
+      librewolf
       aichat
       tdesktop
       element-desktop
       gimp
+      gparted
       inkscape
       libreoffice-fresh
       mpv
@@ -50,6 +52,8 @@ in
       smplayer
       qbittorrent
       vscode
+      jetbrains.webstorm
+      jetbrains.goland
       # etcher
       unetbootin
       usbimager
@@ -63,6 +67,7 @@ in
       # picom-pijulius
       # picom-jonaburg
       # python311Packages.ewmh
+      xorg.xhost
       qmk
       powerline
 

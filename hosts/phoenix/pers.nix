@@ -16,6 +16,8 @@
         "/var/lib/docker"
         "/var/lib/lxd"
         "/var/lib/libvirt"
+        "/var/lib/cups"
+        "/var/cache/cups"
       ];
       
       files = [

@@ -17,20 +17,20 @@ in
 			
       # jqless = "jq -C | less -r";
 
-      # n = "nix";
-      # nd = "nix develop -c $SHELL";
-      # ns = "nix shell";
-      # nsn = "nix shell nixpkgs#";
-      # nb = "nix build";
-      # nbn = "nix build nixpkgs#";
-      # nf = "nix flake";
+      n = "nix";
+      nd = "nix develop -c $SHELL";
+      ns = "nix shell";
+      nsn = "nix shell nixpkgs#";
+      nb = "nix build";
+      nbn = "nix build nixpkgs#";
+      nf = "nix flake";
 
-      # nr = "nixos-rebuild --flake .";
-      # nrs = "nixos-rebuild --flake . switch";
-      # snr = "sudo nixos-rebuild --flake .";
-      # snrs = "sudo nixos-rebuild --flake . switch";
-      # hm = "home-manager --flake .";
-      # hms = "home-manager --flake . switch";
+      nr = "nixos-rebuild --flake .";
+      nrs = "nixos-rebuild --flake . switch";
+      snr = "doas nixos-rebuild --flake .";
+      snrs = "doas nixos-rebuild --flake . switch";
+      hm = "home-manager --flake .";
+      hms = "home-manager --flake . switch";
 
       # ls = mkIf hasExa "exa -al --color=always --group-directories-first --icons";
 

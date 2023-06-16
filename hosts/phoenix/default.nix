@@ -113,6 +113,7 @@
     # electron_22
     python311
     python311Packages.pip
+    # mongodb
    ];
 
   # Some programs need SUID wrappers, can be configured further or are

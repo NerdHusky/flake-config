@@ -32,7 +32,7 @@
 
 {
   home.sessionVariables = {
-    GTK_THEME = "Catppuccin-Mocha-Blue";
+    GTK_THEME = "Catppuccin-Mocha-Compact-Blue-Dark";
   };
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors.mochaLight;
@@ -44,12 +44,12 @@
     enable = true;
 
     theme = {
-      name = "Catppuccin-Mocha-Blue";
+      name = "Catppuccin-Mocha-Compact-Blue-Dark";
       package = pkgs.catppuccin-gtk.override {
+        variant = "mocha";
         accents = [ "blue" ];
         size = "compact";
-        tweaks = [ "rimless" "black" ];
-        variant = "mocha";
+        tweaks = [ "black" /* "normal" "rimless" */ ];
       };
     };
 
@@ -71,19 +71,24 @@
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
     };
     gtk2.extraConfig = ''
       gtk-xft-antialias=1
       gtk-xft-hinting=1
       gtk-xft-hintstyle="hintslight"
       gtk-xft-rgba="rgb"
+      gtk-application-prefer-dark-theme = 1
     '';
   };
 
   services.xsettingsd = {
     enable = true;
     settings = {
-      "Net/ThemeName" = "Catppuccin-Mocha-Blue";
+      "Net/ThemeName" = "Catppuccin-Mocha-Compact-Blue-Dark";
       "Net/IconThemeName" = "Papirus-Dark";
       "Net/CursorThemeName" = "Catppuccin-Mocha-Light-Cursors";
       # "Gtk/CursorThemeName" = "Catppuccin-Mocha-Light-Cursors";

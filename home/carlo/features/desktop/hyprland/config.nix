@@ -76,7 +76,7 @@ in
 
   # Startup
   exec-once=waybar
-  exec=swaybg -i ${../../../wallpaper.png} --mode fill
+  exec=swaybg -i ${../../../wallpaper.jpg} --mode fill
   exec-once=mako
   exec-once=swayidle -w
 

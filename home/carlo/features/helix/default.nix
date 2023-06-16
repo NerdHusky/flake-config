@@ -41,7 +41,46 @@
           #   source = { git = "https://github.com/nix-community/tree-sitter-nix"; };
           # }];
         }
-      ];
+
+        {
+          name = "rust";
+          indent = { tab-width = 2; unit = "  "; };
+        }   
+          
+        {
+          name = "html";
+          formatter = { command = "prettier"; args = ["--parser" "html"]; };
+        }     
+        {
+          name = "json";
+          formatter = { command = "prettier"; args = ["--parser" "json"]; };
+        }     
+        {
+          name = "css";
+          formatter = { command = "prettier"; args = ["--parser" "css"]; };
+        }     
+        {
+          name = "javascript";
+          formatter = { command = "prettier"; args = ["--parser" "javascript"]; };
+          auto-format = true;
+          language-server = { command = "eslint"; args = ["--stdio"]; };
+        }     
+        {
+          name = "typescript";
+          formatter = { command = "prettier"; args = ["--parser" "typescript"]; };
+          auto-format = true;
+        }     
+        {
+          name = "tsx";
+          formatter = { command = "prettier"; args = ["--parser" "tsx"]; };
+          auto-format = true;
+        }     
+        {
+          name = "jsx";
+          formatter = { command = "prettier"; args = ["--parser" "jsx"]; };
+          auto-format = true;
+        }     
+     ];
       grammar = [
         {
           name = "nix";

@@ -7,6 +7,7 @@ in
   imports = [
     # inputs.impermanence.nixosModules.home-manager.impermanence
     inputs.nix-colors.homeManagerModule
+    inputs.nix-colors.hmModule
     # ../features/nvim
     ../features/helix
     ../features/cli
