@@ -55,7 +55,7 @@
     layout = "us";
     xkbVariant = "altgr-intl";
   };
-  services.xserver.xkbOptions = "caps:escape";
+  # services.xserver.xkbOptions = "caps:escape";
 
   # services.xserver.displayManager.gdm.enable = true;
   

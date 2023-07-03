@@ -38,6 +38,13 @@
       neededForBoot = true;
     };
 
+  fileSystems."/persist/lxd" =
+    { device = "/dev/disk/by-uuid/70fe3706-ec7d-4df8-bff9-5b0e209318a5";
+      fsType = "btrfs";
+      options = [ "subvol=persist" "compress=zstd" "noatime" "datacow" ];
+      # neededForBoot = true;
+    };
+
   fileSystems."/var/log" =
     { device = "/dev/disk/by-uuid/70fe3706-ec7d-4df8-bff9-5b0e209318a5";
       fsType = "btrfs";

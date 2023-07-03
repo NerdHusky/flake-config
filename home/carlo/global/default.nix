@@ -7,12 +7,11 @@ in
   imports = [
     # inputs.impermanence.nixosModules.home-manager.impermanence
     inputs.nix-colors.homeManagerModule
-    inputs.nix-colors.hmModule
+    inputs.nix-doom-emacs.hmModule
     # ../features/nvim
     ../features/helix
     ../features/cli
-  ];
-  # ] ++ (builtins.attrValues outputs.homeManagerModules);
+    ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   # home-manager = {
   #   extraSpecialArgs = { inherit inputs outputs; };

@@ -40,10 +40,12 @@ in
       aichat
       tdesktop
       element-desktop
+      meld
       gimp
       gparted
       inkscape
       libreoffice-fresh
+      wpsoffice
       mpv
       vlc
       kitty
@@ -70,6 +72,10 @@ in
       xorg.xhost
       qmk
       powerline
+      distrobox
+
+      freecad
+      openscad
 
       teamviewer
       # vial

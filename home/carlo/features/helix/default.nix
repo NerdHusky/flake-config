@@ -84,7 +84,7 @@
       grammar = [
         {
           name = "nix";
-          source = {git = "https://github.com/nix-community/tree-sitter-nix";};
+          source = {git = "https://github.com/nix-community/tree-sitter-nix"; rev = "1b69cf1fa92366eefbe6863c184e5d2ece5f187d";};
         }
       ];
     };

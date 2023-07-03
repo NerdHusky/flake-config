@@ -5,6 +5,7 @@
     # ./bat.nix
     # ./direnv.nix
     ./fish.nix
+    ./nushell.nix
     # ./gh.nix
     # ./git.nix
     # ./gpg.nix
@@ -16,9 +17,17 @@
     # ./ssh.nix
     ./starship.nix
     ./tmux.nix
-    ./demacs.nix
+    # ./demacs.nix
     # ./xpo.nix
   ];
+
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+
+  wayland.windowManager.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+  };
 
   home.packages = with pkgs; [
     comma # Install and run programs by sticking a , before them
@@ -57,6 +66,7 @@
     pass
     polkit
     p7zip
+    speedtest-cli
     
     fzf
     # tldr
@@ -64,13 +74,20 @@
     cht-sh
 
     ### Programming, will find another place
-    nodejs_20
+    nodejs_18
     nodePackages.prettier
     nodePackages.eslint
+    nodePackages.typescript-language-server
+    # nodePackages.prisma
+    node2nix
+    deno
+    # bun
     yarn
     elixir
     go
     gopls
+    gccgo
+    # gcc_multi
     python311
     rustup
     mongodb-compass
