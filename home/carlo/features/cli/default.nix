@@ -29,6 +29,10 @@
     package = pkgs.swayfx;
   };
 
+home.file."/home/carlo/.local/share/fonts/".recursive = true;
+home.file."/home/carlo/.local/share/fonts/".source = ../../fonts;
+
+
   home.packages = with pkgs; [
     comma # Install and run programs by sticking a , before them
     distrobox # Nice escape hatch, integrates docker images with my environment
@@ -67,6 +71,11 @@
     polkit
     p7zip
     speedtest-cli
+    jc
+    traceroute
+
+    bat
+    broot
     
     fzf
     # tldr
@@ -91,6 +100,9 @@
     python311
     rustup
     mongodb-compass
+    postman
+
+    terraform
 
     # ltex-ls # Spell checking LSP
   ];

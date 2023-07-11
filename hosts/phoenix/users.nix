@@ -73,6 +73,13 @@ in
       qmk
       powerline
       distrobox
+      # oni2
+      # nodePackages.esy # to compile onivim
+      nasm # idem
+      # nodePackages.node-gyp #idem
+
+      pulseaudio
+      pavucontrol
 
       freecad
       openscad
@@ -87,6 +94,8 @@ in
       # luarocks
       # awesome
 
+      xorg.xdpyinfo # Maybe for distrobox kali airgeddon to work?
+      
       airgeddon
       aircrack-ng
       coreutils-full
