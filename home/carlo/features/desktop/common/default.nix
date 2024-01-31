@@ -18,5 +18,6 @@
   home.packages = with pkgs; [
     # xdg-utils-spawn-terminal
     xdg-utils
+    
   ];
 }

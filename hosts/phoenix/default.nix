@@ -101,6 +101,10 @@
   # services.xserver.videoDrivers = [ "nvidia" ];
   # hardware.opengl.enable = true;
   # hardware.nvidia.modesetting.enable = true;
+  services.udev.packages = with pkgs; [
+    vial
+    via
+  ];
 
   nixpkgs.config.permittedInsecurePackages = [
       # "python-2.7.18.6"
@@ -111,6 +115,7 @@
     git
     cudaPackages.cudatoolkit
     linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open
+    zram-generator
     # electron_22
     python311
     python311Packages.pip
@@ -129,6 +134,8 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+   
+  services.ratbagd.enable = true;
   # services.openssh.settings.PermitRootLogin = "no";
 
   # Open ports in the firewall.

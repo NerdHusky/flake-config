@@ -17,6 +17,8 @@
         "quiet"
         "splash"
         "nvidia-drm.modeset=1"
+        "console=ttyS0,115200"
+        "console=tty1"
       ];
       consoleLogLevel = 0;
       initrd.verbose = false;

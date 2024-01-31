@@ -26,6 +26,10 @@
       };
     };
     languages ={
+      # language-server.nix = {
+      #   enable = true;
+      #   command = "nil";
+      # };
       language = [
         {
           name = "nix";
@@ -34,7 +38,7 @@
           file-types = ["nix"];
           comment-token = "#";
           indent = { tab-width = 2; unit = "  "; };
-          language-server = {command = "nil";} ;
+          # language-server = {command = "nil";} ;
           formatter = { command = "nixfmt";};
           # grammar = [{
           #   name = "nix";

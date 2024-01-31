@@ -26,6 +26,7 @@ in
       scrollback_lines = 4000;
       scrollback_pager_history_size = 2048;
       window_padding_width = 15;
+      linux_display_server = "X11";
       # foreground = "#${colors.base05}";
       # background = "#${colors.base00}";
       background_opacity = "0.75";

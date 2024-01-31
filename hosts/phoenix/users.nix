@@ -9,13 +9,13 @@ in
   users.mutableUsers  = false;
 
   users.users.root = {
-    passwordFile = config.sops.secrets.carlo-password.path;
+    hashedPasswordFile = config.sops.secrets.carlo-password.path;
     # initialHashedPassword = "$6$yr0XTMplnycxj3yW$bIsz5.OlrOBXTqR1jC6SneYEn5rT93OKcs0drrzo4/5YCSAbcv5KP1Eivec0vPuMcKEXURFeI.bJkPusy3AES.";
   };
 
   users.users.carlo = {
     # initialHashedPassword = "$6$yr0XTMplnycxj3yW$bIsz5.OlrOBXTqR1jC6SneYEn5rT93OKcs0drrzo4/5YCSAbcv5KP1Eivec0vPuMcKEXURFeI.bJkPusy3AES.";
-    passwordFile = config.sops.secrets.carlo-password.path;
+    hashedPasswordFile = config.sops.secrets.carlo-password.path;
     isNormalUser = true;
     extraGroups = [
       "wheel"
@@ -37,6 +37,7 @@ in
       brave
       google-chrome
       librewolf
+      microsoft-edge
       aichat
       tdesktop
       element-desktop
@@ -46,6 +47,7 @@ in
       inkscape
       libreoffice-fresh
       wpsoffice
+      calibre
       mpv
       vlc
       kitty
@@ -75,8 +77,28 @@ in
       distrobox
       # oni2
       # nodePackages.esy # to compile onivim
-      nasm # idem
+      # nasm # idem
       # nodePackages.node-gyp #idem
+      # ( lutris.override { 
+      #   extraPkgs = pkgs : [
+      #     wineWowPackages.full
+      #     winetricks
+      #   ]; 
+      #   }
+      # )
+      lutris
+      wineWowPackages.full
+      winetricks
+      mangohud
+
+      piper
+      # libratbagd
+
+      bitwarden
+      discord
+
+      # plover.dev
+    #  winePackages.staging
 
       pulseaudio
       pavucontrol
@@ -99,6 +121,7 @@ in
       airgeddon
       aircrack-ng
       coreutils-full
+      ntfs-utils
       curl
       gawk
       glibc
@@ -123,7 +146,7 @@ in
       john
       wireshark-cli
       bettercap
-      dhcp
+      # dhcp
       dnsmasq
       ettercap
       hostapd
@@ -138,6 +161,11 @@ in
 
       home-manager
     ];
+  };
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
   };
 
   home-manager = {

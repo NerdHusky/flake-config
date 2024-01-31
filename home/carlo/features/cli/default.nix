@@ -40,7 +40,8 @@ home.file."/home/carlo/.local/share/fonts/".source = ../../fonts;
     bc # Calculator
     bottom # System viewer
     ncdu # TUI disk usage
-    exa # Better ls
+    # exa # Better ls
+    eza # Better ls
     ripgrep # Better grep
     fd # Better find
     httpie # Better curl
@@ -97,13 +98,29 @@ home.file."/home/carlo/.local/share/fonts/".source = ../../fonts;
     gopls
     gccgo
     # gcc_multi
-    python311
+    # python311
     rustup
+    # (override {
+    #   overrides = self: super: {
+    #     ihaskell = super.ihaskell.override {
+    #       python3 = super.python3.withoutExtensions ["2to3"];
+    #     };
+    #   };
+    # })
+    ihaskell
+    # ghc
+    haskellPackages.cabal-install
+    haskellPackages.stack
+    elmPackages.elm
+    elmPackages.elm-format
+
     mongodb-compass
-    postman
+    #postman
 
     terraform
+    terraform-ls
 
+  vial
     # ltex-ls # Spell checking LSP
   ];
 }
