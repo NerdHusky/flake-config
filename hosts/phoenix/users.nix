@@ -121,7 +121,7 @@ in
       airgeddon
       aircrack-ng
       coreutils-full
-      ntfs-utils
+      ntfs3g
       curl
       gawk
       glibc
