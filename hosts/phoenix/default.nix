@@ -91,6 +91,10 @@
     ];
   };
 
+  # services.hardware.xow.enable = true;
+  hardware.bluetooth.enable = true;
+  hardware.xpadneo.enable = true;
+
   ### UNFREE
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = builtins.attrValues outputs.overlays;
@@ -113,14 +117,28 @@
 
   environment.systemPackages = with pkgs; [
     git
-    cudaPackages.cudatoolkit
+    # cudaPackages.cudatoolkit
     linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open
+    pkgs.linuxKernel.packages.linux_xanmod_stable.openrazer
     zram-generator
     # electron_22
     python311
     python311Packages.pip
     # mongodb
    ];
+  
+  # environment.sessionVariables = {
+  #   MOZ_ENABLE_WAYLAND = 1;
+  #   QT_QPA_PLATFORM = "wayland";
+  #   LIBSEAT_BACKEND = "logind";
+	#   LIBVA_DRIVER_NAME = "nvidia";
+	# 	XDG_SESSION_TYPE = "wayland";
+	# 	GBM_BACKEND = "nvidia-drm";
+	# 	__GLX_VENDOR_LIBRARY_NAME = "nvidia";
+	# 	WLR_NO_HARDWARE_CURSORS = 1;
+  #   NIXOS_OZONE_WL = "1";
+  #   # GDK_BACKEND = "x11";
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -170,6 +188,23 @@
     memoryPercent = 40;
     priority = 10;
     algorithm = "zstd";
+  };
+
+programs.hyprland = { # we use this instead of putting it in systemPackages/users  
+    enable = true;  
+
+    # package = inputs.hyprland.packages.${pkgs.system}.default;
+    xwayland.enable = true;  
+    # nvidiaPatches = true; # ONLY use this line if you have an nvidia card  
+    package = inputs.hyprland.packages.${pkgs.system}.default;
+    # extraConfig =
+      # (import ./monitors.nix {
+      #   inherit lib;
+      #   inherit (config) monitors;
+      # }) +
+      # (import ./config.nix {
+      #   inherit (config) home colorscheme;
+      # });
   };
 
   # This value determines the NixOS release from which the default

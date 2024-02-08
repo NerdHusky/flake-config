@@ -33,9 +33,7 @@
   ];
 
   programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {
-    mesonFlags = (oa.mesonFlags or  [ ]) ++ [ "-Dexperimental=true" ];
-  });
-
+    mesonFlags = (oa.mesonFlags or  [ ]) ++ [ "-Dexperimental=true" ];});
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.default;
@@ -48,4 +46,7 @@
         inherit (config) home colorscheme;
       });
   };
+    
+  # });
+
 }

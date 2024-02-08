@@ -96,12 +96,16 @@ in
 
       bitwarden
       discord
+      betterdiscordctl
 
       # plover.dev
     #  winePackages.staging
 
       pulseaudio
       pavucontrol
+
+      razergenie
+      openrazer-daemon
 
       freecad
       openscad
@@ -158,10 +162,13 @@ in
       xterm
       xorg.xset
       xorg.xdpyinfo
+      
+      xow_dongle-firmware
 
       home-manager
     ];
   };
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
