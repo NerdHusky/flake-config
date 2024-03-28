@@ -56,7 +56,8 @@ home.file."/home/carlo/.local/share/fonts/".source = ../../fonts;
     neovim
     neofetch
     pipes
-    matrixcli
+    # matrixcli
+    matrix-commander
     killall
     # git
     btop

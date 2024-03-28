@@ -14,13 +14,14 @@
 		sops
     age
     ssh-to-age
-    pinentry-gnome
+    pinentry-gnome3
     gcr
 	];
 
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "gnome3";
+    # pinentryFlavor = "gnome3";
+    # pinentryPackage = pkgs.pinentry_gnome;
   };
 }
 

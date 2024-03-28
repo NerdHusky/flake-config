@@ -112,8 +112,10 @@
 
   nixpkgs.config.permittedInsecurePackages = [
       # "python-2.7.18.6"
-  #   "electron-12.2.3"
+  #   "electron-12..3"
+     "freeimage-unstable-2021-11-01"
   ];
+
 
   environment.systemPackages = with pkgs; [
     git
@@ -163,11 +165,62 @@
   # networking.firewall.enable = false;
 
  
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = "experimental-features = nix-command flakes";
-    # settings.max-jobs = 3;
-  };
+  # nix = {
+  #   package = pkgs.nixFlakes;
+  #   environment.systemPackages = with pkgs; [
+  #   git
+  #   # cudaPackages.cudatoolkit
+  #   linuxKernel.packages.linux_xanmod_stable.nvidia_x11_stable_open
+  #   pkgs.linuxKernel.packages.linux_xanmod_stable.openrazer
+  #   zram-generator
+  #   # electron_22
+  #   python311
+  #   python311Packages.pip
+  #   # mongodb
+  #  ];
+  # };
+  
+  # environment.sessionVariables = {
+  #   # MOZ_ENABLE_WAYLAND = "1";
+  #   # QT_QPA_PLATFORM = "wayland";
+  #   # LIBSEAT_BACKEND = "logind";
+	#   # LIBVA_DRIVER_NAME = "nvidia";
+	# 	# XDG_SESSION_TYPE = "wayland";
+	# 	# GBM_BACKEND = "nvidia-drm";
+	# 	# __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+	# 	WLR_NO_HARDWARE_CURSORS = "1";
+  #   NIXOS_OZONE_WL = "1";
+  #   # GDK_BACKEND = "x11";
+  # };
+
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
+
+  # List services that you want to enable:
+
+  # Enable the OpenSSH daemon.
+  # services.openssh.enable = true;
+   
+  # services.ratbagd.enable = true;
+  # services.openssh.settings.PermitRootLogin = "no";
+
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
+
+ 
+  # nix = {
+  #   package = pkgs.nixFlakes;
+  #   extraOptions = "experimental-features = nix-command flakes";
+  #   # settings.max-jobs = 3;
+  # };
 
   security.polkit.enable = true;
   security.sudo = {
